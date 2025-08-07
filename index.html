@@ -3,10 +3,7 @@ layout: default
 title: Главная
 ---
 
-<header class="header">
-  <h3>{{ site.title }}</h3>
-  <button id="theme-toggle" aria-label="Переключить тему">🌙</button>
-</header>
+
 {% for post in site.posts %}
   <article class="post" data-title="{{ post.title | escape }}" data-description="{{ post.description | escape }}">
     <a href="{{ post.url }}">
@@ -16,4 +13,3 @@ title: Главная
     <p>{{ post.description }}</p>
   </article>
   {% endfor %}
-</div>
