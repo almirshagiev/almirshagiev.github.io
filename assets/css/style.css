@@ -92,18 +92,23 @@ time {
   font-size: 1.1rem;
 }
 
-
 .site-title {
   font-size: 1rem;
   font-weight: 600;
+  margin-left: 0.2rem; /* слегка сдвигает вправо */
+  text-decoration: none;
+  color: inherit;
+}
+.site-title:hover {
+  text-decoration: underline;
 }
 
-body.light {
+html.light {
   background-color: #f5f7f5;
   color: #111;
 }
 
-body.dark {
+html.dark {
   background-color: #1f1f1f;
   color: #f0f0f0;
 }
