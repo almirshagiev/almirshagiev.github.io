@@ -5,11 +5,12 @@ title: Главная
 
 <header class="header">
   <h1>{{ site.title }}</h1>
-  <button id="theme-toggle" aria-label="Переключить тему">🌙</button>
   <input type="search" id="search-input" placeholder="Поиск...">
+  <div id="posts-list"></div> 
+  <button id="theme-toggle" aria-label="Переключить тему">🌙</button>
 </header>
 
-<div id="posts-list">
+
   {% for post in site.posts %}
   <article class="post" data-title="{{ post.title | escape }}" data-description="{{ post.description | escape }}">
     <a href="{{ post.url }}">
