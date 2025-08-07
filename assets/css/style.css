@@ -9,7 +9,7 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 .dark {
-  background: #111;
+  background: #192c1b;
   color: #eee;
 }
 .container {
@@ -76,3 +76,18 @@ time {
 .dark #theme-toggle:hover {
   background: #222;
 }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 720px;
+  margin: 0 auto 2rem auto;
+  padding: 1rem;
+}
+
+.site-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
