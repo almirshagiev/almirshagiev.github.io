@@ -1,22 +1,56 @@
 body {
-  font-family: "Georgia", serif;
-  background: #fff;
+  font-family: Georgia, serif;
+  background: #f3f7f5; /* светлый с лёгким зелёно-серым оттенком */
   color: #111;
   margin: 0;
-  padding: 2rem;
-  line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
+  padding: 3rem 1rem;
+  line-height: 1.7;
+  font-size: 18px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 .dark {
   background: #111;
   color: #eee;
-}
+
 .container {
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
+
 h1, h2 {
-  font-weight: normal;
+  font-weight: 400;
+  margin-bottom: 0.3em;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+.post {
+  margin-bottom: 3rem;
+}
+
+time {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.dark time {
+  color: #aaa;
+}
+
+.post a {
+  text-decoration: none;
+  color: inherit;
+}
+.post a:hover {
+  text-decoration: underline;
 }
 .header {
   display: flex;
@@ -25,19 +59,20 @@ h1, h2 {
   gap: 1rem;
   flex-wrap: wrap;
 }
-#search-input {
-  padding: 0.5rem;
-  font-size: 1rem;
-  width: 100%;
-  max-width: 300px;
+#theme-toggle {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
-.post {
-  margin-top: 2rem;
+
+#theme-toggle:hover {
+  background: #e6ebe9;
 }
-.post a {
-  text-decoration: none;
-  color: inherit;
-}
-.post a:hover {
-  text-decoration: underline;
+
+.dark #theme-toggle:hover {
+  background: #222;
 }
