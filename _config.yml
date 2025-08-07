@@ -1,0 +1,9 @@
+title: Мой блог
+description: Простой блог в стиле Ильяхова
+baseurl: ""
+url: ""
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
