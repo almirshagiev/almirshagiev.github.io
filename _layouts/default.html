@@ -5,47 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- устанавливаем тему ДО загрузки стилей -->
   <script>
     (function() {
-    const theme = localStorage.getItem('theme');
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    }
-  })();
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+      }
+    })();
   </script>
-</head>
-<body>
-<header class="site-header">
-  <a class="site-title" href="/">{{ site.title }}</a>
-  <button id="theme-toggle" aria-label="Переключить тему">🌙</button>
-</header>
 
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="site-title" href="/">{{ site.title }}</a>
+    <button id="theme-toggle" aria-label="Переключить тему">🌙</button>
+  </header>
 
   <main class="container">
     {{ content }}
   </main>
+
   <script>
-  const btn = document.getElementById('theme-toggle');
-  const darkClass = 'dark';
+    const btn = document.getElementById('theme-toggle');
+    const darkClass = 'dark';
 
-  function setTheme(dark) {
-    document.documentElement.classList.toggle(darkClass, dark);
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
-    if (btn) btn.textContent = dark ? '☀️' : '🌙';
-  }
+    function setTheme(dark) {
+      document.documentElement.classList.toggle(darkClass, dark);
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+      if (btn) btn.textContent = dark ? '☀️' : '🌙';
+    }
 
-  if (btn) {
-    btn.addEventListener('click', () => {
-      setTheme(!document.documentElement.classList.contains(darkClass));
-    });
+    if (btn) {
+      btn.addEventListener('click', () => {
+        setTheme(!document.documentElement.classList.contains(darkClass));
+      });
 
-    // установить иконку на старте
-    const current = localStorage.getItem('theme');
-    setTheme(current === 'dark');
-  }
-</script>
-
+      const current = localStorage.getItem('theme');
+      setTheme(current === 'dark');
+    }
+  </script>
 </body>
 </html>

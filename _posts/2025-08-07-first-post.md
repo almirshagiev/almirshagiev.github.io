@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Первый пост
 date: 2025-08-07
 description: Это первый пост в блоге.
