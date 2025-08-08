@@ -21,8 +21,8 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 2.6rem; /* было 2.2rem */
-  font-weight: 700;  /* делаем жирнее */
+  font-size: 2.6rem;
+  font-weight: 700;
   margin-top: 0;
 }
 
