@@ -21,7 +21,8 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 150px;
+  font-size: 2.6rem; /* было 2.2rem */
+  font-weight: 700;  /* делаем жирнее */
   margin-top: 0;
 }
 
@@ -74,7 +75,8 @@ time {
 }
 
 .post h1 {
-  font-size: 2.2rem;
+  font-size: 2.6rem; /* было 2.2rem */
+  font-weight: 700;  /* делаем жирнее */
   margin-bottom: 0.5rem;
   line-height: 1.3;
 }
